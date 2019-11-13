@@ -77,3 +77,8 @@ steps:
     diff:
       - file: src/index.js
         display: true
+  - name: 展示移动历史
+    commit: b61a7ff
+    diff:
+      - file: src/index.js
+        display: true
