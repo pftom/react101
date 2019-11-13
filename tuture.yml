@@ -62,3 +62,8 @@ steps:
     diff:
       - file: src/index.js
         display: true
+  - name: 开始翻转
+    commit: f423342
+    diff:
+      - file: src/index.js
+        display: true
