@@ -72,3 +72,8 @@ steps:
     diff:
       - file: src/index.js
         display: true
+  - name: 再次状态提升
+    commit: eaccb8e
+    diff:
+      - file: src/index.js
+        display: true
