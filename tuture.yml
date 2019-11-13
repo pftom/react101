@@ -1,0 +1,38 @@
+name: React 入门教程
+description: React
+topics:
+  - React
+categories:
+  - 前端
+  - React
+  - 入门
+id: 175e68bc6680f24dfc8180a5b24caa77
+created: '2019-11-12T06:26:05.940Z'
+updated: 2019-11-12T06:30:27.679Z
+steps:
+  - name: 代码准备
+    commit: fd83d85
+    diff:
+      - file: .gitignore
+      - file: README.md
+        display: false
+      - file: package.json
+        display: false
+      - file: public/favicon.ico
+        display: false
+      - file: public/index.html
+        display: false
+      - file: public/logo192.png
+        display: false
+      - file: public/logo512.png
+        display: false
+      - file: public/manifest.json
+        display: false
+      - file: public/robots.txt
+        display: false
+      - file: src/index.css
+        display: true
+      - file: src/index.js
+        display: true
+      - file: yarn.lock
+        display: false
