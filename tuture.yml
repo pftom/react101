@@ -57,3 +57,8 @@ steps:
     diff:
       - file: src/index.js
         display: true
+  - name: 使用函数式组件
+    commit: b72c6b1
+    diff:
+      - file: src/index.js
+        display: true
