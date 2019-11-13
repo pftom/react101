@@ -67,3 +67,8 @@ steps:
     diff:
       - file: src/index.js
         display: true
+  - name: 显示获胜者
+    commit: e999aee
+    diff:
+      - file: src/index.js
+        display: true
