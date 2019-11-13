@@ -36,3 +36,8 @@ steps:
         display: true
       - file: yarn.lock
         display: false
+  - name: 通过 Props 传递数据
+    commit: 3cf4f5f
+    diff:
+      - file: src/index.js
+        display: true
