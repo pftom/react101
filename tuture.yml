@@ -82,3 +82,8 @@ steps:
     diff:
       - file: src/index.js
         display: true
+  - name: 加上 key
+    commit: 859840a
+    diff:
+      - file: src/index.js
+        display: true
