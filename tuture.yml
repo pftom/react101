@@ -52,3 +52,8 @@ steps:
     diff:
       - file: src/index.js
         display: true
+  - name: 状态提升
+    commit: 08c001e
+    diff:
+      - file: src/index.js
+        display: true
