@@ -41,3 +41,14 @@ steps:
     diff:
       - file: src/index.js
         display: true
+  - name: 编写交互式组件
+    commit: 4f393e4
+    diff:
+      - file: src/index.js
+        display: true
+    outdated: true
+  - name: 编写交互式组件
+    commit: dc9cb48
+    diff:
+      - file: src/index.js
+        display: true
