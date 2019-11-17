@@ -8,7 +8,7 @@ categories:
   - ''
 id: 5c8fdb60a9cbfbc27aae247a4a4b7376
 created: '2019-11-13T03:11:19.855Z'
-updated: 2019-11-16T14:36:28.557Z
+updated: 2019-11-17T09:42:51.560Z
 steps:
   - name: 代码准备
     commit: fd83d85
@@ -416,7 +416,7 @@ steps:
             ### 开发工具
 
 
-            [Chrome](https://www.gugeapps.net/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi#download)
+            [Chrome](https://github-production-release-asset-2e65be.s3.amazonaws.com/221361523/7e14ee00-0961-11ea-8eeb-8b3fab0c9ac0?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20191117%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20191117T094150Z&X-Amz-Expires=300&X-Amz-Signature=8b9e5dbd0063fa57281f85a54802e45ccb8176607042d5ae06bb55d322bddecf&X-Amz-SignedHeaders=host&actor_id=26423749&response-content-disposition=attachment%3B%20filename%3D4.2.0_0.zip&response-content-type=application%2Foctet-stream)
             和
             [Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)
             的 React Devtools 扩展插件能让你在开发者工具中查看 React 组件树。
@@ -1479,4 +1479,4 @@ steps:
 
         做的好！我们期望你现在已经对 React 有一个很深刻的理解了。
 
-        点击这个链接查看最终的结果：
+        点击这个链接查看最终的结果：[最终结果。](https://codepen.io/huan1043269994/pen/JjjaBBw)
