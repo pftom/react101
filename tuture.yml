@@ -12,7 +12,23 @@ categories:
   - 入门
 id: 5c8fdb60a9cbfbc27aae247a4a4b7376
 created: "2019-11-13T03:11:19.855Z"
-updated: 2019-11-17T10:28:00.299Z
+github: "https://github.com/pftom/react101"
+updated: 2019-11-19T11:11:28.977Z
+splits:
+  - name: React 入门教程（一)
+    description: >-
+      本篇教程通过构建一个井字棋游戏来讲解 React 的基础知识，是非常经典的 Learn by doing
+      的教授/学习技术的方式。通过学习本篇教程你不仅可以学习到如何使用脚手架初始化项目，学习 React 的基础知识如
+      props，state，组件等，还可以学习一些编写代码的最佳实践，最后完成一个带有 “时间旅行”
+      的井字棋游戏。相信你在学习完本篇教程之后，会成为这场游戏里面的最大胜者！
+    start: fd83d85
+    end: 08c001e
+  - name: React 入门教程（二）
+    description: >-
+      这是 React 入门教程的第二部分，主要介绍了组件、不可变性、列表和 Key 等知识，通过再次进行组件状态提升
+      来强调其在 React 哲学中的重要地位。这一部分与上一部分很好的串联在一起，相比上一部分内容会更有难度一点。
+    start: b72c6b1
+    end: 4493d81
 steps:
   - name: 代码准备
     commit: fd83d85
@@ -227,11 +243,11 @@ steps:
             修改 Board 的 `renderSquare` 方法中的代码，传递 `value` 属性给 Square：
 
 
-            ```diff
+            ```JavaScript
 
             class Board extends React.Component {
               renderSquare(i) {
-            +   return <Square value={i} />;
+                return <Square value={i} />;
               }
             }
 
@@ -242,13 +258,13 @@ steps:
             `{this.props.value}`：
 
 
-            ```diff
+            ```JavaScript
 
             class Square extends React.Component {
               render() {
                 return (
                   <button className="square">
-            +       {this.props.value}
+                    {this.props.value}
                   </button>
                 );
               }
@@ -441,13 +457,12 @@ steps:
         标签修改成下面这样：
 
 
-        ```diff
+        ```JavaScript
 
         class Square extends React.Component {
           render() {
             return (
-        +     <button className="square" onClick={function() { alert('click');
-        }}>
+              <button className="square" onClick={function() { alert('click'); }}>
                 {this.props.value}
               </button>
             );
@@ -466,11 +481,11 @@ steps:
         的混淆行为](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this)，在下面和之后的代码中我们将使用[箭头函数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)作为事件处理函数：
 
 
-        ```diff
+        ```JavaScript
          class Square extends React.Component {
           render() {
             return (
-        +    <button className="square" onClick={() => alert('click')}>
+             <button className="square" onClick={() => alert('click')}>
                 {this.props.value}
               </button>
             );
@@ -503,21 +518,15 @@ steps:
             Square。
 
 
-            ```diff
+            ```JavaScript
 
             class Board extends React.Component {
-
-            +  constructor(props) {
-
-            +    super(props);
-
-            +    this.state = {
-
-            +      squares: Array(9).fill(null),
-
-            +    };
-
-            +  }
+               constructor(props) {
+                 super(props);
+                 this.state = {
+                   squares: Array(9).fill(null),
+                 };
+               }
 
               renderSquare(i) {
                 return <Square value={i} />;
@@ -558,9 +567,9 @@ steps:
             Board 的 `renderSquare` 方法来读取它。
 
 
-            ```diff
+            ```JavaScript
              renderSquare(i) {
-            +   return <Square value={this.state.squares[i]} />;
+                return <Square value={this.state.squares[i]} />;
               }
             ```
 
@@ -577,12 +586,12 @@ steps:
             `renderSquare` 方法如下：
 
 
-            ```diff
+            ```JavaScript
               renderSquare(i) {
                 return (
                   <Square
                     value={this.state.squares[i]}
-            +       onClick={() => this.handleClick(i)}
+                    onClick={() => this.handleClick(i)}
                   />
                 );
               }
@@ -611,16 +620,16 @@ steps:
             在做出上面的改变修改之后，Square 组件变成了下面这样：
 
 
-            ```diff
+            ```JavaScript
 
             class Square extends React.Component {
               render() {
                 return (
                   <button
                     className="square"
-            +       onClick={() => this.props.onClick()}
+                    onClick={() => this.props.onClick()}
                   >
-            +       {this.props.value}
+                    {this.props.value}
                   </button>
                 );
               }
@@ -659,7 +668,7 @@ steps:
             方法，我们将马上加上它：
 
 
-            ```diff
+            ```JavaScript
 
             class Board extends React.Component {
               constructor(props) {
@@ -669,15 +678,11 @@ steps:
                 };
               }
 
-            + handleClick(i) {
-
-            +   const squares = this.state.squares.slice();
-
-            +   squares[i] = 'X';
-
-            +   this.setState({squares: squares});
-
-            + }
+              handleClick(i) {
+                const squares = this.state.squares.slice();
+                squares[i] = 'X';
+                this.setState({squares: squares});
+              }
 
               renderSquare(i) {
                 return (
@@ -888,14 +893,14 @@ steps:
         我们将把第一步移动默认设置为 “X”。我们可以在 Board 的 `constructor` 里面修改它：
 
 
-        ```diff
+        ```JavaScript
 
         class Board extends React.Component {
           constructor(props) {
             super(props);
             this.state = {
               squares: Array(9).fill(null),
-        +     xIsNext: true,
+              xIsNext: true,
             };
           }
         ```
@@ -905,13 +910,13 @@ steps:
         里面。我们将修改 Board 的 `handleClick` 函数来翻转 `xIsNext` 的值：
 
 
-        ```diff
+        ```JavaScript
           handleClick(i) {
             const squares = this.state.squares.slice();
-        +   squares[i] = this.state.xIsNext ? 'X' : 'O';
+            squares[i] = this.state.xIsNext ? 'X' : 'O';
             this.setState({
               squares: squares,
-        +     xIsNext: !this.state.xIsNext,
+              xIsNext: !this.state.xIsNext,
             });
           }
         ```
@@ -1005,27 +1010,18 @@ steps:
         首先，我们将在 Game 的 constructor 中来设置它的初始状态：
 
 
-        ```diff
+        ```JavaScript
 
         class Game extends React.Component {
-
-        + constructor(props) {
-
-        +   super(props);
-
-        +   this.state = {
-
-        +     history: [{
-
-        +       squares: Array(9).fill(null),
-
-        +     }],
-
-        +     xIsNext: true,
-
-        +   };
-
-        + }
+          constructor(props) {
+            super(props);
+            this.state = {
+              history: [{
+                squares: Array(9).fill(null),
+              }],
+              xIsNext: true,
+            };
+          }
 
           render() {
             return (
@@ -1062,7 +1058,7 @@ steps:
         Board 组件现在看起来是这样的：
 
 
-        ```diff
+        ```JavaScript
 
         class Board extends React.Component {
           handleClick(i) {
@@ -1080,9 +1076,8 @@ steps:
           renderSquare(i) {
             return (
               <Square
-        +       value={this.props.squares[i]}
-
-        +       onClick={() => this.props.onClick(i)}
+                value={this.props.squares[i]}
+                onClick={() => this.props.onClick(i)}
               />
             );
           }
@@ -1125,49 +1120,9 @@ steps:
         我们将更新 Game 组件的 `render` 函数来使用最新历史记录，并通过这一历史记录来展示游戏的状态：
 
 
-        ```diff
+        ```JavaScript
 
-        render() {
 
-        +   const history = this.state.history;
-
-        +   const current = history[history.length - 1];
-
-        +   const winner = calculateWinner(current.squares);
-
-        +
-
-        +   let status;
-
-        +   if (winner) {
-
-        +     status = 'Winner: ' + winner;
-
-        +   } else {
-
-        +     status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
-
-        +   }
-
-            return (
-              <div className="game">
-                <div className="game-board">
-        +         <Board
-
-        +           squares={current.squares}
-
-        +           onClick={(i) => this.handleClick(i)}
-
-        +         />
-
-                </div>
-                <div className="game-info">
-        +         <div>{status}</div>
-                  <ol>{/* TODO */}</ol>
-                </div>
-              </div>
-            );
-          }
         ```
 
 
@@ -1177,26 +1132,29 @@ steps:
 
         ```diff
 
-        +render() {
+        render() {
+           const history = this.state.history;
+           const current = history[history.length - 1];
+           const winner = calculateWinner(current.squares);
 
-        +   return (
+           let status;
+           if (winner) {
+             status = 'Winner: ' + winner;
+           } else {
+             status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+           }
 
-        +     <div>
-
-        +       <div className="board-row">
-                  {this.renderSquare(0)}
-                  {this.renderSquare(1)}
-                  {this.renderSquare(2)}
-                </div>
-                <div className="board-row">
-                  {this.renderSquare(3)}
-                  {this.renderSquare(4)}
-                  {this.renderSquare(5)}
-                </div>
-                <div className="board-row">
-                  {this.renderSquare(6)}
-                  {this.renderSquare(7)}
-                  {this.renderSquare(8)}
+            return (
+              <div className="game">
+                <div className="game-board">
+                 <Board
+                   squares={current.squares}
+                   onClick={(i) => this.handleClick(i)}
+                 />
+               </div>
+               <div className="game-info">
+                 <div>{status}</div>
+                  <ol>{/* TODO */}</ol>
                 </div>
               </div>
             );
@@ -1209,24 +1167,19 @@ steps:
         方法中，我们将新的历史记录条目添加到 `history` 中。
 
 
-        ```diff
+        ```JavaScript
           handleClick(i) {
-        +   const history = this.state.history;
-
-        +   const current = history[history.length - 1];
-
-        +   const squares = current.squares.slice();
+            const history = this.state.history;
+            const current = history[history.length - 1];
+            const squares = current.squares.slice();
             if (calculateWinner(squares) || squares[i]) {
               return;
             }
             squares[i] = this.state.xIsNext ? 'X' : 'O';
-        +   this.setState({
-
-        +     history: history.concat([{
-
-        +       squares: squares,
-
-        +     }]),
+            this.setState({
+              history: history.concat([{
+                squares: squares,
+              }]),
               xIsNext: !this.state.xIsNext,
             });
           }
@@ -1395,7 +1348,7 @@ steps:
                 squares: Array(9).fill(null),
               }],
               stepNumber: 0,
-        +     xIsNext: true,
+              xIsNext: true,
             };
           }
         ```
@@ -1405,7 +1358,7 @@ steps:
         是偶数时，我们将把 `xIsNext` 设置为 true。
 
 
-        ```diff
+        ```JavaScript
           handleClick(i) {
             // this method has not changed
           }
@@ -1436,10 +1389,9 @@ steps:
         “未来” 的历史记录，因为它们现在已经变得不在正确了。
 
 
-        ```diff
+        ```JavaScript
           handleClick(i) {
-        +   const history = this.state.history.slice(0, this.state.stepNumber +
-        1);
+            const history = this.state.history.slice(0, this.state.stepNumber + 1);
             const current = history[history.length - 1];
             const squares = current.squares.slice();
             if (calculateWinner(squares) || squares[i]) {
@@ -1450,7 +1402,7 @@ steps:
               history: history.concat([{
                 squares: squares
               }]),
-        +     stepNumber: history.length,
+              stepNumber: history.length,
               xIsNext: !this.state.xIsNext,
             });
           }
@@ -1460,10 +1412,10 @@ steps:
         最终，我们将修改 Game 组件的 `render` 方法，从之前总是渲染最后一个步骤变成根据 `stepNumber` 渲染目前选中的步骤。
 
 
-        ```diff
+        ```JavaScript
           render() {
             const history = this.state.history;
-        +   const current = history[this.state.stepNumber];
+            const current = history[this.state.stepNumber];
             const winner = calculateWinner(current.squares);
 
             // the rest has not changed
