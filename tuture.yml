@@ -11,8 +11,8 @@ categories:
   - React
   - 入门
 id: 5c8fdb60a9cbfbc27aae247a4a4b7376
-created: "2019-11-13T03:11:19.855Z"
-github: "https://github.com/pftom/react101"
+created: '2019-11-13T03:11:19.855Z'
+github: 'https://github.com/pftom/react101'
 updated: 2019-11-19T11:11:28.977Z
 splits:
   - name: React 入门教程（一)
@@ -25,8 +25,8 @@ splits:
     end: 08c001e
   - name: React 入门教程（二）
     description: >-
-      这是 React 入门教程的第二部分，主要介绍了组件、不可变性、列表和 Key 等知识，通过再次进行组件状态提升
-      来强调其在 React 哲学中的重要地位。这一部分与上一部分很好的串联在一起，相比上一部分内容会更有难度一点。
+      这是 React 入门教程的第二部分，主要介绍了组件、不可变性、列表和 Key 等知识，通过再次进行组件状态提升 来强调其在 React
+      哲学中的重要地位。这一部分与上一部分很好的串联在一起，相比上一部分内容会更有难度一点。
     start: b72c6b1
     end: 4493d81
 steps:
