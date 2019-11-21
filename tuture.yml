@@ -11,11 +11,11 @@ categories:
   - React
   - 入门
 id: 5c8fdb60a9cbfbc27aae247a4a4b7376
-created: '2019-11-13T03:11:19.855Z'
-github: 'https://github.com/pftom/react101'
+created: "2019-11-13T03:11:19.855Z"
+github: "https://github.com/pftom/react101"
 updated: 2019-11-19T11:11:28.977Z
 splits:
-  - name: React 入门教程（一)
+  - name: 用 React 实现一个井字棋游戏（一)
     description: >-
       本篇教程通过构建一个井字棋游戏来讲解 React 的基础知识，是非常经典的 Learn by doing
       的教授/学习技术的方式。通过学习本篇教程你不仅可以学习到如何使用脚手架初始化项目，学习 React 的基础知识如
@@ -23,7 +23,7 @@ splits:
       的井字棋游戏。相信你在学习完本篇教程之后，会成为这场游戏里面的最大胜者！
     start: fd83d85
     end: 08c001e
-  - name: React 入门教程（二）
+  - name: 用 React 实现一个井字棋游戏（二）
     description: >-
       这是 React 入门教程的第二部分，主要介绍了组件、不可变性、列表和 Key 等知识，通过再次进行组件状态提升 来强调其在 React
       哲学中的重要地位。这一部分与上一部分很好的串联在一起，相比上一部分内容会更有难度一点。
