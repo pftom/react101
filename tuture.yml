@@ -11,8 +11,8 @@ categories:
   - React
   - 入门
 id: 5c8fdb60a9cbfbc27aae247a4a4b7376
-created: "2019-11-13T03:11:19.855Z"
-github: "https://github.com/pftom/react101"
+created: '2019-11-13T03:11:19.855Z'
+github: 'https://github.com/pftom/react101'
 updated: 2019-11-19T11:11:28.977Z
 splits:
   - name: 用 React 实现一个井字棋游戏（一)
