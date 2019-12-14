@@ -13,7 +13,7 @@ categories:
 id: 5c8fdb60a9cbfbc27aae247a4a4b7376
 created: '2019-11-13T03:11:19.855Z'
 github: 'https://github.com/pftom/react101'
-updated: 2019-11-19T11:11:28.977Z
+updated: 2019-12-14T02:09:33.248Z
 splits:
   - name: 用 React 实现一个井字棋游戏（一)
     description: >-
@@ -635,7 +635,7 @@ steps:
               }
             }
 
-            ``` 
+            ```
 
 
             当 Square 被点击时，由 Board 提供的 `onClick` 函数就会调用。下面是对我们上面所做的一个回顾：
