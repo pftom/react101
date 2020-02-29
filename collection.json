@@ -3,14 +3,9 @@
   "description": "本篇教程通过构建一个井字棋游戏来讲解 React 的基础知识，是非常经典的 Learn by doing 的教授/学习技术的方式。通过学习本篇教程你不仅可以学习到如何使用脚手架初始化项目，学习 React 的基础知识如 props，state，组件等，还可以学习一些编写代码的最佳实践，最后完成一个带有 “时间旅行” 的井字棋游戏。相信你在学习完本篇教程之后，会成为这场游戏里面的最大胜者！",
   "id": "5c8fdb60a9cbfbc27aae247a4a4b7376",
   "created": "2019-11-13T03:11:19.855Z",
-  "topics": [
-    "React"
-  ],
-  "categories": [
-    "前端",
-    "React",
-    "入门"
-  ],
+  "github": "https://github.com/pftom/react101",
+  "topics": ["React"],
+  "categories": ["前端", "React", "入门"],
   "articles": [
     {
       "name": "用 React 实现一个井字棋游戏（一)",
